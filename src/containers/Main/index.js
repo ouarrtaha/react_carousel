@@ -1,6 +1,7 @@
 // NPM
 import React, {Component} from 'react'
 import queryString from 'query-string'
+
 // PROJECT
 import './content.css';
 import NavBar from '@/components/NavBar'
@@ -8,10 +9,18 @@ import Footer from '@/components/Footer'
 
 class Main extends Component {
     render() {
+        const queries = queryString.parse(this.props.location.search)
+        const col = queries.columns, row = queries.rows
+
+        const contentStyle = {
+            gridTemplateColumns: `repeat(${col}, 1fr)`,
+            gridTemplateRows: `repeat(${row}, 1fr)`
+        }
+
         return (
             <div>
                 <NavBar/>
-                <div className="content">
+                <div style={contentStyle} className="content">
                     <div className="content-item">1</div>
                     <div className="content-item">2</div>
                     <div className="content-item">3</div>
@@ -30,11 +39,8 @@ class Main extends Component {
     }
 
 
-    componentDidMount(){
-        const queries = queryString.parse(this.props.location.search)
-        const col=queries.columns, row=queries.rows
-        console.log("Col", col)
-        console.log("Row", row)
+    componentDidMount() {
+
     }
 }
 
