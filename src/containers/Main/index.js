@@ -12,9 +12,12 @@ class Main extends Component {
 
         this.state = {
             currentPosition: 0,
-            itemWidth: 250
+            itemWidth: 250,
+            nbrItems: 9,
+            translationLimit: null
         };
     }
+
 
     render() {
         const queries = queryString.parse(this.props.location.search)
@@ -61,7 +64,12 @@ class Main extends Component {
     }
 
     componentDidMount() {
-
+        const queries = queryString.parse(this.props.location.search)
+        const col = queries.columns, row = queries.rows
+        const translationLimit = this.state.itemWidth * (Math.round(this.state.nbrItems / row) - col)
+        this.setState({
+            translationLimit
+        })
     }
 
     componentDidUpdate(prevState) {
@@ -72,9 +80,13 @@ class Main extends Component {
     }
 
     move(value) {
-        this.setState({
-            currentPosition: this.state.currentPosition + value
-        })
+        const newPosition = this.state.currentPosition + value
+        if (newPosition <= 0 && newPosition >= -this.state.translationLimit) {
+            this.setState({
+                currentPosition: newPosition
+            })
+        }
+
 
     }
 }
