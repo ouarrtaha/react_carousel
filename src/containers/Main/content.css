@@ -1,0 +1,27 @@
+.content{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap:10px;
+    grid-auto-flow: column;
+    width: 100%;
+    overflow: scroll;
+}
+
+.content-item{
+    background: #556076;
+    color:#fff;
+    font-size:30px;
+    width: 200px;
+    height:200px;
+    line-height:200px;
+    text-align:center;
+}
+
+
+@media (max-width:590px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
