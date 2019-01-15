@@ -2,7 +2,8 @@ import React from 'react';
 
 const navBar = (props) => (
     <div>
-        <h1>navBar</h1>
+        <button onClick={props.prevClicked}>previous</button>
+        <button onClick={props.nextClicked}>next</button>
     </div>
 );
 
