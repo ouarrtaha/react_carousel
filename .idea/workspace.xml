@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c5c6abe9-1778-4bb3-b9b3-145244a1ae73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Main/content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/content.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -53,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Main/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state relative-caret-position="282">
+              <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
               <folding>
                 <element signature="e#7#45#0" expanded="true" />
                 <element signature="e#96#119#0" expanded="true" />
@@ -66,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/NavBar/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="42" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -116,6 +113,8 @@
       <find>port</find>
       <find>3000</find>
       <find>300</find>
+      <find>nbrItems</find>
+      <find>floor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -276,7 +275,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547510844016</updated>
-      <workItem from="1547510847642" duration="8029000" />
+      <workItem from="1547510847642" duration="12340000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore .idea">
       <created>1547510911722</created>
@@ -334,11 +333,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547516465308</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Setup slider mechanism">
+      <created>1547583664054</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1547583664054</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Set translation limits">
+      <created>1547587639373</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1547587639373</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8029000" />
+    <option name="totallyTimeSpent" value="12340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -375,7 +388,9 @@
     <MESSAGE value="Setup grid view" />
     <MESSAGE value="Install react-router &amp; parse url queries" />
     <MESSAGE value="Edit grid from url queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit grid from url queries" />
+    <MESSAGE value="Setup slider mechanism" />
+    <MESSAGE value="Set translation limits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set translation limits" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -449,13 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NavBar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -481,10 +489,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NavBar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Main/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state relative-caret-position="282">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
           <folding>
             <element signature="e#7#45#0" expanded="true" />
             <element signature="e#96#119#0" expanded="true" />

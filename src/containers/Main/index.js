@@ -26,7 +26,7 @@ class Main extends Component {
         const contentStyle = {
             gridTemplateColumns: `repeat(${col}, minmax(${this.state.itemWidth}px, 1fr))`,
             gridTemplateRows: `repeat(${row}, 1fr)`,
-            width: `calc(${this.state.itemWidth}px * ${col})`
+            width: `${Math.min(this.state.itemWidth * col, this.state.itemWidth * Math.ceil(this.state.nbrItems / row))}px`
         }
 
         const itemStyle = {
@@ -66,7 +66,7 @@ class Main extends Component {
     componentDidMount() {
         const queries = queryString.parse(this.props.location.search)
         const col = queries.columns, row = queries.rows
-        const translationLimit = this.state.itemWidth * (Math.round(this.state.nbrItems / row) - col)
+        const translationLimit = this.state.itemWidth * (Math.ceil(this.state.nbrItems / row) - col)
         this.setState({
             translationLimit
         })
@@ -86,8 +86,6 @@ class Main extends Component {
                 currentPosition: newPosition
             })
         }
-
-
     }
 }
 
