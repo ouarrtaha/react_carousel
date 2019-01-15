@@ -1,5 +1,6 @@
 // NPM
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import queryString from 'query-string'
 // PROJECT
 import './content.css';
 import NavBar from '@/components/NavBar'
@@ -26,6 +27,14 @@ class Main extends Component {
                 <Footer/>
             </div>
         );
+    }
+
+
+    componentDidMount(){
+        const queries = queryString.parse(this.props.location.search)
+        const col=queries.columns, row=queries.rows
+        console.log("Col", col)
+        console.log("Row", row)
     }
 }
 
