@@ -46,3 +46,24 @@
     font-family: "Font Awesome 5 Free", sans-serif;
     font-weight: 900;
 }
+
+.logo{
+    float: left;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo-img{
+    margin-right: 6px;
+}
+
+.logo-img img {
+    width: 30px;
+    height: 30px;
+}
+
+.welcome{
+    font-size: 14px;
+}
