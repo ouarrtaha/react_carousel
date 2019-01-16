@@ -25,6 +25,7 @@ class Main extends Component {
                     type: "video",
                     title: "Video 1",
                     subtitle: "sample",
+                    thumbnail: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     url: "https://www.youtube.com/watch?v=qIdF8CQKXx4"
                 },
                 {
@@ -37,12 +38,18 @@ class Main extends Component {
                     type: "video",
                     title: "Video 2",
                     subtitle: "sample",
+                    thumbnail: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     url: "https://www.youtube.com/watch?v=qIdF8CQKXx4"
                 },
                 {
                     id: 5,
                     type: "image",
                     url: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                },
+                {
+                    id: 6,
+                    type: "text",
+                    content: "another quote"
                 }
             ],
             translationLimit: null,
