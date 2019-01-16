@@ -1,0 +1,48 @@
+.nav-bar{
+    background-color: #2d343e;
+}
+
+.nav-bar::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.btn-container{
+    float: right;
+    margin: 3px 4px
+}
+
+.btn{
+    margin: 3px;
+    border: none;
+    border-radius: 50%;
+    background-color: #556076;
+    width: 30px;
+    height: 30px;
+    color: white;
+    transition: all .3s ease-out;
+}
+
+.btn:hover{
+    background-color: #687590;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    cursor: pointer;
+}
+
+.btn:active{
+    background-color: #4e596c;
+    box-shadow: 0 0 7px rgba(0,0,0,.5);
+}
+
+.btn-previous::before{
+    content: '\f060';
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+}
+
+.btn-next::before{
+    content: '\f061';
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+}

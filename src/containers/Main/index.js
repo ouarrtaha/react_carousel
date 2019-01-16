@@ -18,7 +18,7 @@ class Main extends Component {
                 {
                     id: 1,
                     type: "text",
-                    content: "sample text"
+                    content: "Sample text"
                 },
                 {
                     id: 2,
@@ -49,7 +49,30 @@ class Main extends Component {
                 {
                     id: 6,
                     type: "text",
-                    content: "another quote"
+                    content: "Another quote"
+                },
+                {
+                    id: 7,
+                    type: "image",
+                    url: "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall-750x500.jpg"
+                },
+                {
+                    id: 8,
+                    type: "video",
+                    title: "Video 2",
+                    subtitle: "sample",
+                    thumbnail: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                    url: "https://www.youtube.com/watch?v=qIdF8CQKXx4"
+                },
+                {
+                    id: 9,
+                    type: "image",
+                    url: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                },
+                {
+                    id: 10,
+                    type: "text",
+                    content: "Another quote"
                 }
             ],
             translationLimit: null,
