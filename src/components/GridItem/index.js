@@ -17,13 +17,15 @@ const renderItem = item => {
 
     if(item.type === "image"){
         return(
-            <img className="image" src={item.url} alt={item.id}/>
+            <div className="image">
+                <img className="thumbnail" src={item.url} alt={item.id}/>
+            </div>
         );
     }
 
     if(item.type === "video"){
         return(
-            <img className="image" src={item.thumbnail} alt={item.id}/>
+            <img className="thumbnail video" src={item.thumbnail} alt={item.id}/>
         );
     }
 }
