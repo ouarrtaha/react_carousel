@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5c6abe9-1778-4bb3-b9b3-145244a1ae73" name="Default Changelist" comment="">
+    <list default="true" id="c5c6abe9-1778-4bb3-b9b3-145244a1ae73" name="Default Changelist" comment="Adjust grid to take the min width">
+      <change afterPath="$PROJECT_DIR$/src/components/ProgressBar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProgressBar/progressBar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Footer/Footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Footer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -39,23 +43,41 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Footer/index.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/Footer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/Main/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-151">
+              <caret line="71" column="70" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
+              <folding>
+                <element signature="e#7#45#0" expanded="true" />
+                <element signature="e#96#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ProgressBar/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/containers/Main/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/ProgressBar/progressBar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-              <folding>
-                <element signature="e#7#45#0" expanded="true" />
-                <element signature="e#96#119#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -72,24 +94,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Main/content.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="159">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.css">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -106,6 +114,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -131,7 +146,13 @@
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/NavBar/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Main/content.css" />
+        <option value="$PROJECT_DIR$/src/components/Footer/index.js" />
+        <option value="$PROJECT_DIR$/src/components/ProgressBar/progress-bar.css" />
+        <option value="$PROJECT_DIR$/src/containers/Footer/Footer.css" />
+        <option value="$PROJECT_DIR$/src/containers/Footer/index.js" />
+        <option value="$PROJECT_DIR$/src/components/ProgressBar/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Main/index.js" />
+        <option value="$PROJECT_DIR$/src/components/ProgressBar/progressBar.css" />
       </list>
     </option>
   </component>
@@ -177,20 +198,27 @@
               <item name="ur_test1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ur_test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ur_test1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="NavBar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ur_test1" type="b2602c69:ProjectViewProjectNode" />
               <item name="ur_test1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ProgressBar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ur_test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ur_test1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ur_test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ur_test1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Footer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ur_test1" type="b2602c69:ProjectViewProjectNode" />
@@ -208,6 +236,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.9.0" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
@@ -219,6 +248,9 @@
     <property name="settings.editor.selected.configurable" value="settings.webpack" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/containers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -275,7 +307,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547510844016</updated>
-      <workItem from="1547510847642" duration="12340000" />
+      <workItem from="1547510847642" duration="16215000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore .idea">
       <created>1547510911722</created>
@@ -347,11 +379,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547587639373</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adjust grid to take the min width">
+      <created>1547589649736</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1547589649736</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12340000" />
+    <option name="totallyTimeSpent" value="16215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -390,7 +429,8 @@
     <MESSAGE value="Edit grid from url queries" />
     <MESSAGE value="Setup slider mechanism" />
     <MESSAGE value="Set translation limits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set translation limits" />
+    <MESSAGE value="Adjust grid to take the min width" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust grid to take the min width" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -432,13 +472,6 @@
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Footer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -475,17 +508,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Main/content.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="990" column="8" selection-start-line="990" selection-start-column="8" selection-end-line="990" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Footer/Footer.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Main/content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -498,12 +534,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Main/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        <state relative-caret-position="-151">
+          <caret line="71" column="70" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
           <folding>
             <element signature="e#7#45#0" expanded="true" />
             <element signature="e#96#119#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Footer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ProgressBar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ProgressBar/progressBar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>

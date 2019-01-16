@@ -1,0 +1,12 @@
+.bar-container{
+    width: 100%;
+    height: 7px;
+    background-color: #556076;
+}
+
+.bar{
+    width: 0;
+    height: 100%;
+    background-color: #14ad30;
+    transition: all .3s ease-out;
+}
