@@ -11,7 +11,12 @@ const item = (props) => (
 const renderItem = item => {
     if(item.type === "text"){
         return(
-            item.content
+            <div className="quote-wrapper">
+                <div className="quote-text">
+                    {item.content}
+                </div>
+            </div>
+
         );
     }
 
