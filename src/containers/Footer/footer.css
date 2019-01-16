@@ -1,0 +1,39 @@
+.footer-info{
+    height: 35px;
+    background-color: #2d343e;
+}
+
+.footer-info::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.footer-link{
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    text-transform: uppercase;
+
+}
+
+.footer-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.footer-logo{
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    height: 100%;
+}
+
+.footer-logo img{
+    width: 70px;
+}
