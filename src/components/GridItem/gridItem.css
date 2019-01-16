@@ -70,6 +70,7 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
+    z-index: 5;
 }
 
 .video .info {
@@ -89,15 +90,45 @@
     position: relative;
 }
 
-
-.video .info button::after{
+.video .info button::before{
     content: "\f04b";
     font-family: "Font Awesome 5 Free", sans-serif;
     font-weight: 900;
 }
 
+.video .info button::after{
+    content: '';
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    z-index: -1;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background-color: #5ae02d;
+    opacity: 0;
+}
+
 .video .info button:hover{
     cursor: pointer;
+}
+
+.video:hover button{
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+.video:hover button::after{
+    opacity: 0.4;
+}
+
+
+.video button,
+.video button::after,
+.video button::before{
+    transition: all .3s ease-out;
 }
 
 .video .info .info-content{
