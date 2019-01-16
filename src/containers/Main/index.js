@@ -69,7 +69,7 @@ class Main extends Component {
         }
 
         const itemStyle = {
-            width: `${this.state.itemWidth}px`,
+            width: `${this.state.itemWidth}px`
         }
 
         return (

@@ -25,7 +25,19 @@ const renderItem = item => {
 
     if(item.type === "video"){
         return(
-            <img className="thumbnail video" src={item.thumbnail} alt={item.id}/>
+            <div className="video">
+                <img className="thumbnail" src={item.thumbnail} alt={item.id}/>
+                <div className="info-wrapper">
+                    <div className="info">
+                        <button/>
+                        <div className="info-content">
+                            <div className="main-title">{item.title}</div>
+                            <div className="subtitle">{item.subtitle}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         );
     }
 }
