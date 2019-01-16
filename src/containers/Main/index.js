@@ -5,6 +5,7 @@ import queryString from 'query-string'
 import './content.css';
 import NavBar from '@/components/NavBar'
 import Footer from '@/containers/Footer'
+import GridItem from '@/components/GridItem'
 
 class Main extends Component {
     constructor(props) {
@@ -13,9 +14,40 @@ class Main extends Component {
         this.state = {
             currentPosition: 0,
             itemWidth: 250,
-            nbrItems: 21,
+            items: [
+                {
+                    id: 1,
+                    type: "text",
+                    content: "sample text"
+                },
+                {
+                    id: 2,
+                    type: "video",
+                    title: "Video 1",
+                    subtitle: "sample",
+                    url: "https://www.youtube.com/watch?v=qIdF8CQKXx4"
+                },
+                {
+                    id: 3,
+                    type: "image",
+                    url: "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall-750x500.jpg"
+                },
+                {
+                    id: 4,
+                    type: "video",
+                    title: "Video 2",
+                    subtitle: "sample",
+                    url: "https://www.youtube.com/watch?v=qIdF8CQKXx4"
+                },
+                {
+                    id: 5,
+                    type: "image",
+                    url: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                }
+            ],
             translationLimit: null,
-            percent: 20
+            percent: 20,
+
         };
     }
 
@@ -26,7 +58,7 @@ class Main extends Component {
         const contentStyle = {
             gridTemplateColumns: `repeat(${col}, minmax(${this.state.itemWidth}px, 1fr))`,
             gridTemplateRows: `repeat(${row}, 1fr)`,
-            width: `${Math.min(this.state.itemWidth * col, this.state.itemWidth * Math.ceil(this.state.nbrItems / row))}px`
+            width: `${Math.min(this.state.itemWidth * col, this.state.itemWidth * Math.ceil(this.state.items.length / row))}px`
         }
 
         const itemStyle = {
@@ -43,33 +75,9 @@ class Main extends Component {
                      className="content"
                      ref={e => this.content = e}
                 >
-                    <div style={itemStyle} className="content-item">1</div>
-                    <div style={itemStyle} className="content-item">2</div>
-                    <div style={itemStyle} className="content-item">3</div>
-
-                    <div style={itemStyle} className="content-item">4</div>
-                    <div style={itemStyle} className="content-item">5</div>
-                    <div style={itemStyle} className="content-item">6</div>
-
-                    <div style={itemStyle} className="content-item">7</div>
-                    <div style={itemStyle} className="content-item">8</div>
-                    <div style={itemStyle} className="content-item">9</div>
-
-                    <div style={itemStyle} className="content-item">10</div>
-                    <div style={itemStyle} className="content-item">11</div>
-                    <div style={itemStyle} className="content-item">12</div>
-
-                    <div style={itemStyle} className="content-item">13</div>
-                    <div style={itemStyle} className="content-item">14</div>
-                    <div style={itemStyle} className="content-item">15</div>
-
-                    <div style={itemStyle} className="content-item">16</div>
-                    <div style={itemStyle} className="content-item">17</div>
-                    <div style={itemStyle} className="content-item">18</div>
-
-                    <div style={itemStyle} className="content-item">19</div>
-                    <div style={itemStyle} className="content-item">20</div>
-                    <div style={itemStyle} className="content-item">21</div>
+                    {this.state.items.map(item => (
+                        <GridItem style={itemStyle} key={item.id} item={item}/>
+                    ))}
                 </div>
 
                 <Footer percent={this.state.percent}/>
@@ -80,7 +88,7 @@ class Main extends Component {
     componentDidMount() {
         const queries = queryString.parse(this.props.location.search)
         const col = queries.columns, row = queries.rows
-        const translationLimit = this.state.itemWidth * (Math.ceil(this.state.nbrItems / row) - col)
+        const translationLimit = this.state.itemWidth * (Math.ceil(this.state.items.length / row) - col)
         this.setState({
             translationLimit
         })

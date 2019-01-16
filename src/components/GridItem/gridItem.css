@@ -1,0 +1,11 @@
+.content-item{
+    background: #556076;
+    border: 1px solid white;
+    color:#fff;
+    font-size:30px;
+    width: 200px;
+    height:200px;
+    line-height:200px;
+    text-align:center;
+    box-sizing: border-box;
+}
