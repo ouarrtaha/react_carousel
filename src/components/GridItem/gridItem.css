@@ -114,6 +114,12 @@
 
 .video .info button:hover{
     cursor: pointer;
+    background-color: #4ec127;
+}
+
+.video .info button:active{
+    background-color: #49b523;
+    box-shadow: 0 0 6px rgba(0,0,0,.3);
 }
 
 .video:hover button{
