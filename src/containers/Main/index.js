@@ -13,7 +13,7 @@ class Main extends Component {
 
         this.state = {
             currentPosition: 0,
-            itemWidth: 250,
+            itemWidth: 266,
             items: [
                 {
                     id: 1,
@@ -78,8 +78,11 @@ class Main extends Component {
             translationLimit: null,
             percent: 20,
             autoplayInterval: 4000
-
         };
+    }
+
+    componentWillMount() {
+        this.checkItemWidth()
     }
 
     render() {
@@ -114,6 +117,18 @@ class Main extends Component {
                 <Footer percent={this.state.percent}/>
             </div>
         );
+    }
+
+    checkItemWidth() {
+        /**
+         * The Width of grid items should be equal or greater than minWidth of grid container:
+         * Elsewhere there will be an ugly offset in the slider
+         */
+        if (this.state.itemWidth < 270) {
+            this.setState({
+                itemWidth: 270
+            })
+        }
     }
 
     componentDidMount() {
