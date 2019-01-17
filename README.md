@@ -47,6 +47,6 @@ items: [
 ]
 ```
 
-The project is made with ReactJs, with Grid layout to place items, for styling i used plain css (no preprocessor),
+The project is made with ReactJs, with Grid layout to place items, for styling plain css (no preprocessor),
 the widget is responsive and also accepts touch swipe to navigate, on Hover autoplay will pause immediately. 
 
