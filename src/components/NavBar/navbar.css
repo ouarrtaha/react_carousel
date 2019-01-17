@@ -35,6 +35,10 @@
     box-shadow: 0 0 7px rgba(0,0,0,.5);
 }
 
+.btn:active, .btn:focus{
+    outline: 0;
+}
+
 .btn-previous::before{
     content: '\f060';
     font-family: "Font Awesome 5 Free", sans-serif;
