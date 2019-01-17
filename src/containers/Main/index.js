@@ -24,7 +24,7 @@ class Main extends Component {
                 {
                     id: 1,
                     type: "text",
-                    content: "Sample text"
+                    content: "Sample text 1"
                 },
                 {
                     id: 2,
@@ -55,7 +55,7 @@ class Main extends Component {
                 {
                     id: 6,
                     type: "text",
-                    content: "Another quote"
+                    content: "Another quote 1"
                 },
                 {
                     id: 7,
@@ -78,7 +78,7 @@ class Main extends Component {
                 {
                     id: 10,
                     type: "text",
-                    content: "Another quote"
+                    content: "Another quote 2"
                 }
             ],
         };
