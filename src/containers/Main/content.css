@@ -9,7 +9,7 @@
     grid-auto-columns: auto;
     grid-auto-flow: column;
     width: calc(200px * 3);
-    transition: transform .4s ease-out;
+    transition: transform .6s ease-in-out;
 }
 
 

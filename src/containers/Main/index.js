@@ -77,6 +77,7 @@ class Main extends Component {
             ],
             translationLimit: null,
             percent: 20,
+            autoplayInterval: 4000
 
         };
     }
@@ -117,16 +118,28 @@ class Main extends Component {
 
     componentDidMount() {
         const queries = queryString.parse(this.props.location.search)
-        const col = queries.columns, row = queries.rows
+        const col = queries.columns, row = queries.rows, autoplay = queries.autoplay
         const translationLimit = this.state.itemWidth * (Math.ceil(this.state.items.length / row) - col)
         this.setState({
             translationLimit
         })
+
+        if (autoplay === "true") {
+            setInterval(() => {
+                if ((this.state.currentPosition - this.state.itemWidth) < -this.state.translationLimit) {
+                    this.setState({
+                        currentPosition: 0,
+                        percent: 0
+                    })
+                } else {
+                    this.move(-this.state.itemWidth)
+                }
+            }, this.state.autoplayInterval)
+        }
     }
 
     componentDidUpdate(prevState) {
         if (this.state.currentPosition !== prevState.currentPosition) {
-            console.log('currentPosition', this.state.currentPosition);
             this.content.style.transform = `translateX(${this.state.currentPosition}px)`;
         }
     }

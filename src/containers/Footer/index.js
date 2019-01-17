@@ -13,7 +13,7 @@ const footer = (props) => (
                 <img src={largeLogo} alt="Welcome to the jungle"/>
             </div>
             <div className="footer-link">
-                <a href="#">Voir le profil ></a>
+                <span>Voir le profil ></span>
             </div>
         </div>
     </div>

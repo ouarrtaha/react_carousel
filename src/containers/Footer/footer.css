@@ -19,11 +19,15 @@
 
 }
 
-.footer-link a {
+.footer-link span {
     text-decoration: none;
     color: white;
     font-size: 10px;
     font-weight: 600;
+}
+
+.footer-link:hover span{
+    cursor: pointer;
 }
 
 .footer-logo{

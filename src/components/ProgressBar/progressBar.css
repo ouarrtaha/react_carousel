@@ -8,5 +8,5 @@
     width: 0;
     height: 100%;
     background-color: #14ad30;
-    transition: all .3s ease-out;
+    transition: all .6s ease-in-out;
 }
