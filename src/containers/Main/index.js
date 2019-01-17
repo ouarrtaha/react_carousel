@@ -117,10 +117,13 @@ class Main extends Component {
 
     componentWillMount() {
         const queries = queryString.parse(this.props.location.search)
-        this.setState({
-            cols: queries.columns,
-            rows: queries.rows
-        })
+
+        if (queries.columns) {
+            this.setState({cols: queries.columns})
+        }
+        if (queries.rows) {
+            this.setState({rows: queries.rows})
+        }
 
         window.addEventListener("resize", this.updateItemWidth.bind(this));
     }
