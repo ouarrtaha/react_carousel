@@ -1,6 +1,5 @@
 // NPM
 import React, {Component} from 'react';
-
 // PROJECT
 import "./progressBar.css"
 

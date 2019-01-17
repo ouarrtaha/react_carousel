@@ -17,10 +17,11 @@
 @media (max-width:590px){
     .content{
         grid-template-columns: 1fr !important;
-        width: 270px !important;
+        width: 100vw !important;
     }
-}
 
-.content-item{
-    min-width: 270px
+    .content-item{
+        width: 100vw !important;
+        height: auto;
+    }
 }

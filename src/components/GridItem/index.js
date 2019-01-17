@@ -1,5 +1,6 @@
+// NPM
 import React from 'react';
-
+// PROJECT
 import './gridItem.css'
 
 const item = (props) => (
@@ -9,8 +10,8 @@ const item = (props) => (
 );
 
 const renderItem = item => {
-    if(item.type === "text"){
-        return(
+    if (item.type === "text") {
+        return (
             <div className="quote-wrapper">
                 <div className="quote-text">
                     {item.content}
@@ -20,16 +21,16 @@ const renderItem = item => {
         );
     }
 
-    if(item.type === "image"){
-        return(
+    if (item.type === "image") {
+        return (
             <div className="image">
                 <img className="thumbnail" src={item.url} alt={item.id}/>
             </div>
         );
     }
 
-    if(item.type === "video"){
-        return(
+    if (item.type === "video") {
+        return (
             <div className="video">
                 <img className="thumbnail" src={item.thumbnail} alt={item.id}/>
                 <div className="info-wrapper">

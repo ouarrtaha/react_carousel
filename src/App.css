@@ -1,7 +1,13 @@
 .App{
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     border: 1px solid #999;
+}
+
+@media (max-width:590px){
+    .App{
+        top: 0;
+    }
 }

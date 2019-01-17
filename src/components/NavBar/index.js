@@ -1,6 +1,5 @@
 // NPM
 import React from 'react';
-
 // PROJECT
 import './navbar.css'
 import logo from '@/assets/img/wtjungle-logo.png'

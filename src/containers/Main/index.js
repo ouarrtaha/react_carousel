@@ -6,6 +6,7 @@ import './content.css';
 import NavBar from '@/components/NavBar'
 import Footer from '@/containers/Footer'
 import GridItem from '@/components/GridItem'
+import swipeDetect from '@/utils/touch-swipe'
 
 class Main extends Component {
     constructor(props) {
@@ -13,7 +14,12 @@ class Main extends Component {
 
         this.state = {
             currentPosition: 0,
-            itemWidth: 266,
+            defaultItemWidth: 300,
+            mobileScreen: 590,//Should match the @media max-width defined in stylesheet
+            percent: 0,
+            autoplayInterval: 4000,
+            cols: 3,
+            rows: 2,
             items: [
                 {
                     id: 1,
@@ -75,24 +81,14 @@ class Main extends Component {
                     content: "Another quote"
                 }
             ],
-            translationLimit: null,
-            percent: 20,
-            autoplayInterval: 4000
         };
     }
 
-    componentWillMount() {
-        this.checkItemWidth()
-    }
-
     render() {
-        const queries = queryString.parse(this.props.location.search)
-        const col = queries.columns, row = queries.rows
-
         const contentStyle = {
-            gridTemplateColumns: `repeat(${col}, minmax(${this.state.itemWidth}px, 1fr))`,
-            gridTemplateRows: `repeat(${row}, 1fr)`,
-            width: `${Math.min(this.state.itemWidth * col, this.state.itemWidth * Math.ceil(this.state.items.length / row))}px`
+            gridTemplateColumns: `repeat(${this.state.cols}, minmax(${this.state.itemWidth}px, 1fr))`,
+            gridTemplateRows: `repeat(${this.state.rows}, 1fr)`,
+            width: `${Math.min(this.state.itemWidth * this.state.cols, this.state.itemWidth * Math.ceil(this.state.items.length / this.state.rows))}px`
         }
 
         const itemStyle = {
@@ -119,25 +115,24 @@ class Main extends Component {
         );
     }
 
-    checkItemWidth() {
-        /**
-         * The Width of grid items should be equal or greater than minWidth of grid container:
-         * Elsewhere there will be an ugly offset in the slider
-         */
-        if (this.state.itemWidth < 270) {
-            this.setState({
-                itemWidth: 270
-            })
-        }
+    componentWillMount() {
+        const queries = queryString.parse(this.props.location.search)
+        this.setState({
+            cols: queries.columns,
+            rows: queries.rows
+        })
+
+        window.addEventListener("resize", this.updateItemWidth.bind(this));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateItemWidth.bind(this));
     }
 
     componentDidMount() {
+        // Setup autoplay Handler
         const queries = queryString.parse(this.props.location.search)
-        const col = queries.columns, row = queries.rows, autoplay = queries.autoplay
-        const translationLimit = this.state.itemWidth * (Math.ceil(this.state.items.length / row) - col)
-        this.setState({
-            translationLimit
-        })
+        const autoplay = queries.autoplay
 
         if (autoplay === "true") {
             const handler = () => {
@@ -158,9 +153,21 @@ class Main extends Component {
                 slider = setInterval(handler, this.state.autoplayInterval)
             }
         }
+
+        // Setup mobile touch swipe handler
+        swipeDetect.call(this, this.content, swipe => {
+            if (swipe === "left") {
+                this.move(-this.state.itemWidth)
+            } else if (swipe === "right") {
+                this.move(this.state.itemWidth)
+            }
+        })
+
+        // Update item width to match viewport width
+        this.updateItemWidth()
     }
 
-    componentDidUpdate(prevState) {
+    componentDidUpdate(prevProps, prevState) {
         if (this.state.currentPosition !== prevState.currentPosition) {
             this.content.style.transform = `translateX(${this.state.currentPosition}px)`;
         }
@@ -176,6 +183,24 @@ class Main extends Component {
         }
     }
 
+    updateItemWidth() {
+        const itemComputedWidth = getComputedStyle(document.querySelector('.content-item')).width
+        const itemComputedWidthVal = parseInt(itemComputedWidth.split('p')[0])
+
+        const newItemWidth = window.innerWidth > this.state.mobileScreen ? this.state.defaultItemWidth : itemComputedWidthVal
+        const translationLimit = newItemWidth * (Math.ceil(this.state.items.length / this.state.rows) - (window.innerWidth > this.state.mobileScreen ? this.state.cols : 1))
+        const currentPositionUpdate = window.innerWidth <= this.state.mobileScreen ? -(this.state.percent / 100) * translationLimit : 0
+        const percentUpdate = window.innerWidth <= this.state.mobileScreen ? this.state.percent : 0
+
+        // Update item width and all other properties that depends on it
+        this.setState({
+            itemWidth: newItemWidth,
+            translationLimit,
+            currentPosition: currentPositionUpdate,
+            percent: percentUpdate
+        })
+    }
 }
+
 
 export default Main;
