@@ -125,7 +125,7 @@ class Main extends Component {
         })
 
         if (autoplay === "true") {
-            setInterval(() => {
+            const handler = () => {
                 if ((this.state.currentPosition - this.state.itemWidth) < -this.state.translationLimit) {
                     this.setState({
                         currentPosition: 0,
@@ -134,7 +134,14 @@ class Main extends Component {
                 } else {
                     this.move(-this.state.itemWidth)
                 }
-            }, this.state.autoplayInterval)
+            }
+
+            let slider = setInterval(handler, this.state.autoplayInterval)
+
+            this.content.onmouseenter = () => clearInterval(slider)
+            this.content.onmouseleave = () => {
+                slider = setInterval(handler, this.state.autoplayInterval)
+            }
         }
     }
 
