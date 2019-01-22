@@ -12,7 +12,11 @@ class Main extends Component {
     constructor(props) {
         super(props);
 
+        this.move = this.move.bind(this)
+        this.updateItemWidth = this.updateItemWidth.bind(this)
+
         this.state = {
+            test: 0,
             currentPosition: 0,
             defaultItemWidth: 300,
             mobileScreen: 590,//Should match the @media max-width defined in stylesheet

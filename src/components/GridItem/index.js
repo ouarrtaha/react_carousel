@@ -17,7 +17,6 @@ const renderItem = item => {
                     {item.content}
                 </div>
             </div>
-
         );
     }
 
@@ -43,7 +42,6 @@ const renderItem = item => {
                     </div>
                 </div>
             </div>
-
         );
     }
 }
