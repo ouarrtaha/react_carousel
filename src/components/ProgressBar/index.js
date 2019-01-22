@@ -4,17 +4,24 @@ import React, {Component} from 'react';
 import "./progressBar.css"
 
 class bar extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.bar = null
+    }
+
     render() {
         return (
             <div className="bar-container">
-                <div ref="bar" className="bar"/>
+                <div ref={e => this.bar = e} className="bar"/>
             </div>
         );
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.percent !== this.props.percent) {
-            this.refs.bar.style.width = `${this.props.percent}%`
+            this.bar.style.width = `${this.props.percent}%`
         }
 
     }
